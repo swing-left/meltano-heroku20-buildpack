@@ -26,7 +26,4 @@ cd $BUILD_DIR/meltano
 echo "-----> Installing Meltano plugins"
 meltano install
 
-echo "-----> Upgrading Meltano files"
-meltano upgrade files
-
 meltano invoke airflow --help
