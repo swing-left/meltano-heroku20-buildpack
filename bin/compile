@@ -2,7 +2,16 @@
 # bin/compile <build-dir> <cache-dir>
 set -e
 
+echo "current directoryL $(pwd)"
+echo "meltano binary: $(which meltano)"
+
 BUILD_DIR=$1
+echo "BUILD DIR: $BUILD_DIR"
+CACHE_DIR=$2
+echo "CACHE_DIR: $CACHE_DIR"
+ENV_DIR=$3
+echo "ENV_DIR: $ENV_DIR"
+
 
 cd $BUILD_DIR/meltano
 
@@ -11,3 +20,5 @@ meltano install
 
 echo "-----> Upgrading Meltano files"
 meltano upgrade files
+
+meltano invoke airflow --help
