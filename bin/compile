@@ -15,8 +15,13 @@ echo "ENV_DIR: $ENV_DIR"
 ROOT_DIR=/app
 PYTHONPATH= $ROOT_DIR/.heroku/python/bin/python
 
-cd $ROOT_DIR
-ls -la
+cd meltano
+echo "heroku dir contents"
+ls -la $ROOT_DIR/.heroku/
+echo "heroku/python contents"
+ls -la $ROOT_DIR/.heroku/python
+echo "heroku/python/bin contents"
+ls -la $ROOT_DIR/.heroku/python/bin
 
 echo "-----> Installing Meltano plugins"
 meltano install
