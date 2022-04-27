@@ -2,7 +2,10 @@
 # bin/compile <build-dir> <cache-dir>
 set -e
 
-cd meltano
+BUILD_DIR=$1
+
+cd $BUILD_DIR/meltano
+
 echo "-----> Installing Meltano plugins"
 meltano install
 
