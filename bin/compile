@@ -12,8 +12,11 @@ echo "CACHE_DIR: $CACHE_DIR"
 ENV_DIR=$3
 echo "ENV_DIR: $ENV_DIR"
 
+ROOT_DIR=/app
+PYTHONPATH= $ROOT_DIR/.heroku/python/bin
 
-cd /app/meltano
+cd $ROOT_DIR
+ls -la
 
 echo "-----> Installing Meltano plugins"
 meltano install
