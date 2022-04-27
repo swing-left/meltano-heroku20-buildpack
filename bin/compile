@@ -13,7 +13,7 @@ ENV_DIR=$3
 echo "ENV_DIR: $ENV_DIR"
 
 ROOT_DIR=/app
-PYTHONPATH= $ROOT_DIR/.heroku/python/bin
+PYTHONPATH= $ROOT_DIR/.heroku/python/bin/python
 
 cd $ROOT_DIR
 ls -la
