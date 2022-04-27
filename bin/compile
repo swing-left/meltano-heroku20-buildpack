@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# bin/compile <build-dir> <cache-dir>
+set -e
+
+cd meltano
+echo "-----> Installing Meltano plugins"
+meltano install
+
+echo "-----> Upgrading Meltano files"
+meltano upgrade files
