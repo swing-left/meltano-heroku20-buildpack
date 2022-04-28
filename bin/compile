@@ -16,13 +16,13 @@ ROOT_DIR=/app
 
 echo "-----> Installing Meltano plugins"
 cd $BUILD_DIR/meltano
-meltano install
+# meltano install
 
-AIRFLOW_BIN_PATH=$BUILD_DIR/meltano/.meltano/orchestrators/airflow/venv/bin/airflow
-TAP_POSTGRES_BIN_PATH=$BUILD_DIR/meltano/.meltano/extractors/tap-postgres/venv/bin/tap-postgres
-TARGET_SNOWFLAKE_BIN_PATH=$BUILD_DIR/meltano/.meltano/loaders/target-snowflake/venv/bin/target-snowflake
-TRANSFORMER_DBT_BIN_PATH=$BUILD_DIR/meltano/.meltano/transformers/dbt-snowflake/venv/bin/dbt
-sed -i "s/${BUILD_DIR//\//\\/}/\/app/g" $AIRFLOW_BIN_PATH
-sed -i "s/${BUILD_DIR//\//\\/}/\/app/g" $TAP_POSTGRES_BIN_PATH
-sed -i "s/${BUILD_DIR//\//\\/}/\/app/g" $TARGET_SNOWFLAKE_BIN_PATH
-sed -i "s/${BUILD_DIR//\//\\/}/\/app/g" $TRANSFORMER_DBT_BIN_PATH
+# AIRFLOW_BIN_PATH=$BUILD_DIR/meltano/.meltano/orchestrators/airflow/venv/bin/airflow
+# TAP_POSTGRES_BIN_PATH=$BUILD_DIR/meltano/.meltano/extractors/tap-postgres/venv/bin/tap-postgres
+# TARGET_SNOWFLAKE_BIN_PATH=$BUILD_DIR/meltano/.meltano/loaders/target-snowflake/venv/bin/target-snowflake
+# TRANSFORMER_DBT_BIN_PATH=$BUILD_DIR/meltano/.meltano/transformers/dbt-snowflake/venv/bin/dbt
+# sed -i "s/${BUILD_DIR//\//\\/}/\/app/g" $AIRFLOW_BIN_PATH
+# sed -i "s/${BUILD_DIR//\//\\/}/\/app/g" $TAP_POSTGRES_BIN_PATH
+# sed -i "s/${BUILD_DIR//\//\\/}/\/app/g" $TARGET_SNOWFLAKE_BIN_PATH
+# sed -i "s/${BUILD_DIR//\//\\/}/\/app/g" $TRANSFORMER_DBT_BIN_PATH
