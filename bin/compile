@@ -18,10 +18,11 @@ echo "-----> Installing Meltano plugins"
 cd $BUILD_DIR/meltano
 meltano install
 
-AIRFLOW_BIN_PATH=$BUILD_DIR/.meltano/orchestrators/airflow/venv/bin/airflow
-TAP_POSTGRES_BIN_PATH=$BUILD_DIR/.meltano/extractors/airflow/venv/bin/airflow
-TARGET_SNOWFLAKE_BIN_PATH=$BUILD_DIR/.meltano/loaders/airflow/venv/bin/airflow
-TRANSFORMER_DBT_BIN_PATH=$BUILD_DIR/.meltano/transformers/airflow/venv/bin/airflow
+
+AIRFLOW_BIN_PATH=$BUILD_DIR/meltano/.meltano/orchestrators/airflow/venv/bin/airflow
+TAP_POSTGRES_BIN_PATH=$BUILD_DIR/meltano/.meltano/extractors/airflow/venv/bin/airflow
+TARGET_SNOWFLAKE_BIN_PATH=$BUILD_DIR/meltano/.meltano/loaders/airflow/venv/bin/airflow
+TRANSFORMER_DBT_BIN_PATH=$BUILD_DIR/meltano/.meltano/transformers/airflow/venv/bin/airflow
 sed -i "s/${BUILD_DIR//\//\\/}/\/app/g" $AIRFLOW_BIN_PATH
 sed -i "s/${BUILD_DIR//\//\\/}/\/app/g" $TAP_POSTGRES_BIN_PATH
 sed -i "s/${BUILD_DIR//\//\\/}/\/app/g" $TARGET_SNOWFLAKE_BIN_PATH
