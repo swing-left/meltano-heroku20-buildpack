@@ -15,6 +15,7 @@ echo "ENV_DIR: $ENV_DIR"
 ROOT_DIR=/app
 
 echo "-----> Installing Meltano plugins"
+cd $BUILD_DIR/meltano
 meltano install
 
 AIRFLOW_BIN_PATH=$BUILD_DIR/.meltano/orchestrators/airflow/venv/bin/airflow
