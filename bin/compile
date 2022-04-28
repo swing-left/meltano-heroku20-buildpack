@@ -18,6 +18,8 @@ echo "-----> Installing Meltano plugins"
 cd $BUILD_DIR/meltano
 meltano install
 
+echo "Build dir contents: "
+ls -la $BUILD_DIR
 
 AIRFLOW_BIN_PATH=$BUILD_DIR/meltano/.meltano/orchestrators/airflow/venv/bin/airflow
 TAP_POSTGRES_BIN_PATH=$BUILD_DIR/meltano/.meltano/extractors/airflow/venv/bin/airflow
